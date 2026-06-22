@@ -1,34 +1,24 @@
-<section style="padding:60px 20px;">
-
-<div style="display:flex;justify-content:center;gap:30px;flex-wrap:wrap;">
-
-    <!-- Residents -->
-    <div class="meter">
-        <div class="progress" id="p1"></div>
-        <div class="innerr"></div>
-        <div class="valuess" id="v1">0</div>
-        <div class="labelc">Residents</div>
-    </div>
-
-    <!-- Experience -->
-    <div class="meter">
-        <div class="progress" id="p2"></div>
-        <div class="innerr"></div>
-        <div class="valuess" id="v2">0</div>
-        <div class="labelc">Years</div>
-    </div>
-
-    <!-- Rooms -->
-    <div class="meter">
-        <div class="progress" id="p3"></div>
-        <div class="innerr"></div>
-        <div class="valuess" id="v3">0</div>
-        <div class="labelc">Rooms</div>
-    </div>
-
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG Meter Stats</title>
 
 <style>
+body{
+    margin:0;
+    padding:40px;
+    background:#f5f7fa;
+}
+
+.meter-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
 .meter{
     width:220px;
     height:220px;
@@ -93,6 +83,34 @@
     }
 }
 </style>
+</head>
+
+<body>
+
+<div class="meter-container">
+
+    <div class="meter">
+        <div class="progress" id="p1"></div>
+        <div class="innerr"></div>
+        <div class="valuess" id="v1">0</div>
+        <div class="labelc">Residents</div>
+    </div>
+
+    <div class="meter">
+        <div class="progress" id="p2"></div>
+        <div class="innerr"></div>
+        <div class="valuess" id="v2">0</div>
+        <div class="labelc">Years</div>
+    </div>
+
+    <div class="meter">
+        <div class="progress" id="p3"></div>
+        <div class="innerr"></div>
+        <div class="valuess" id="v3">0</div>
+        <div class="labelc">Rooms</div>
+    </div>
+
+</div>
 
 <script>
 function run(vId,pId,target){
@@ -127,4 +145,5 @@ run("v2","p2",3);
 run("v3","p3",20);
 </script>
 
-</section>
+</body>
+</html>
