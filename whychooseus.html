@@ -12,6 +12,69 @@ body{
     background:#f5f7fa;
 }
 
+
+?*             emoji indicate                         */
+    .why-link{
+    text-align:center;
+    margin:40px 0;
+}
+
+.why-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:50px;
+    position:relative;
+    animation:pulse 1.5s infinite;
+    box-shadow:0 0 0 rgba(37,99,235,0.7);
+}
+
+.why-btn::after{
+    content:"👇 Click Here";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-28px;
+    color:#ff6600;
+    font-size:14px;
+    font-weight:bold;
+    animation:bounce 1s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(37,99,235,0.7);
+    }
+    70%{
+        transform:scale(1.05);
+        box-shadow:0 0 0 20px rgba(37,99,235,0);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateX(-50%) translateY(0);
+    }
+    50%{
+        transform:translateX(-50%) translateY(6px);
+    }
+}
+
+
+
+
+
+
+    
+
 .meter-container{
     display:flex;
     justify-content:center;
