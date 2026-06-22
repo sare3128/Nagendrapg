@@ -33,6 +33,59 @@ content="Nagendra PG for Gents in Electronic City Phase 2 Bangalore. Comfortable
 content="PG in Electronic City, Gents PG Bangalore, PG Near Infosys, PG Near Wipro, Hostel in Electronic City Phase 2, Nagendra PG">
 
 <style>
+
+<!--food-->
+.food-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.food-card{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    transition:0.3s;
+}
+
+.food-card:hover{
+    transform:translateY(-3px);
+}
+
+.food-card h3{
+    color:#2563eb;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.food-card p{
+    font-size:13px;
+    line-height:1.4;
+}
+
+@media(max-width:768px){
+    .food-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:480px){
+    .food-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+
+
+
+
+
+
+    
     nav {
     display: flex;
     gap: 25px;
@@ -528,13 +581,54 @@ display:none;
 
 
 
-    <!-- Bus Stops -->
     
 
 </div>
 </div>
 
 </section>
+<!-- food -->
+<section class="section" id="food">
+
+<h2 class="title">🍽 Food Facility</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌅 Breakfast</h3>
+<p>Idli, Dosa, Upma, Poori & Tea</p>
+</div>
+
+<div class="card">
+<h3>🍛 Lunch</h3>
+<p>Rice, Dal, Curry, Sambar & Pickle</p>
+</div>
+
+<div class="card">
+<h3>🌙 Dinner</h3>
+<p>Chapati, Rice, Curry & Special Menu</p>
+</div>
+
+<div class="card">
+<h3>🥗 Hygienic Food</h3>
+<p>Freshly prepared food with quality ingredients.</p>
+</div>
+
+<div class="card">
+<h3>🥛 Milk & Tea</h3>
+<p>Morning and evening tea facility available.</p>
+</div>
+
+<div class="card">
+<h3>📅 Weekly Special</h3>
+<p>Special meals provided on weekends.</p>
+</div>
+
+</div>
+
+</section>
+
+    
 
 <section class="section" id="gallery">
 
