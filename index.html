@@ -35,18 +35,32 @@ content="PG in Electronic City, Gents PG Bangalore, PG Near Infosys, PG Near Wip
 <style>
 
   
-
-/*   why choose us */
-
+/* meter*/
+    .innerr{
+    width:180px;
+    height:180px;
+    background:#111827;
+    border-radius:50%;
+    position:absolute;
 }
 
+/* NUMBER */
+.values{
+    position:relative;
+    z-index:2;
+    font-size:45px;
+    font-weight:bold;
+    color:white;
+}
 
+.label1{
+    position:absolute;
+    bottom:45px;
+    font-size:14px;
+    color:#93c5fd;
+    z-index:2;
+}
 
-
-
-
-
-    
 
     
 
@@ -81,7 +95,6 @@ content="PG in Electronic City, Gents PG Bangalore, PG Near Infosys, PG Near Wip
     font-size:13px;
     line-height:1.4;
 }
-
 @media(max-width:768px){
     .food-grid{
         grid-template-columns:repeat(2,1fr);
@@ -687,7 +700,42 @@ display:none;
 
     </div>
 
-</section>
+</section>      
+
+
+
+<-- meter-->
+    <div class="meter">
+    <div class="progress" id="p1"></div>
+    <div class="innerr"></div>
+    <div class="values" id="v1">0</div>
+    <div class="label1">Residents</div>
+</div>
+
+<!-- 2 -->
+<div class="meter">
+    <div class="progress" id="p2"></div>
+    <div class="innerr"></div>
+    <div class="values" id="v2">0</div>
+    <div class="label1">Experience</div>
+</div>
+
+<!-- 3 -->
+<div class="meter">
+    <div class="progress" id="p3"></div>
+    <div class="innerr"></div>
+    <div class="values" id="v3">0</div>
+    <div class="label1">Rooms</div>
+</div>
+
+    
+
+
+
+
+
+
+    
 
 
 
