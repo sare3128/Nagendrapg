@@ -1,5 +1,8 @@
-<div class="meter-container">
+<section style="padding:60px 20px;">
 
+<div style="display:flex;justify-content:center;gap:30px;flex-wrap:wrap;">
+
+    <!-- Residents -->
     <div class="meter">
         <div class="progress" id="p1"></div>
         <div class="innerr"></div>
@@ -7,6 +10,7 @@
         <div class="labelc">Residents</div>
     </div>
 
+    <!-- Experience -->
     <div class="meter">
         <div class="progress" id="p2"></div>
         <div class="innerr"></div>
@@ -14,6 +18,7 @@
         <div class="labelc">Years</div>
     </div>
 
+    <!-- Rooms -->
     <div class="meter">
         <div class="progress" id="p3"></div>
         <div class="innerr"></div>
@@ -24,19 +29,9 @@
 </div>
 
 <style>
-.meter-container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:40px;
-    flex-wrap:wrap;
-    margin:60px 0;
-}
-
 .meter{
     width:220px;
     height:220px;
-    border-radius:50%;
     position:relative;
     display:flex;
     justify-content:center;
@@ -49,8 +44,8 @@
     height:100%;
     border-radius:10%;
     background:conic-gradient(#2563eb 0deg,#1e293b 0deg);
-    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 10px), black 0);
-    mask: radial-gradient(farthest-side, transparent calc(100% - 10px), black 0);
+    -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 10px),black 0);
+    mask:radial-gradient(farthest-side,transparent calc(100% - 10px),black 0);
 }
 
 .innerr{
@@ -72,9 +67,30 @@
 .labelc{
     position:absolute;
     bottom:45px;
-    font-size:14px;
     color:#93c5fd;
+    font-size:14px;
     z-index:2;
+}
+
+@media(max-width:768px){
+    .meter{
+        width:170px;
+        height:170px;
+    }
+
+    .innerr{
+        width:135px;
+        height:135px;
+    }
+
+    .valuess{
+        font-size:32px;
+    }
+
+    .labelc{
+        bottom:30px;
+        font-size:12px;
+    }
 }
 </style>
 
@@ -93,8 +109,7 @@ function run(vId,pId,target){
 
         let deg=(val/target)*360;
 
-        p.style.background=
-        `conic-gradient(
+        p.style.background=`conic-gradient(
             #22c55e ${deg}deg,
             #1e293b ${deg}deg
         )`;
@@ -111,3 +126,5 @@ run("v1","p1",35);
 run("v2","p2",3);
 run("v3","p3",20);
 </script>
+
+</section>
