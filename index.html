@@ -784,7 +784,38 @@ alt="WhatsApp">
 </div>
 
 </section>
+function run(vId, pId, target){
 
+    let v = document.getElementById(vId);
+    let p = document.getElementById(pId);
+
+    let val = 0;
+
+    let interval = setInterval(() => {
+
+        val++;
+        v.innerText = val;
+
+        let deg = (val / target) * 360;
+
+        p.style.background = `conic-gradient(
+            #22c55e ${deg}deg,
+            #1e293b ${deg}deg
+        )`;
+
+        if(val >= target){
+            clearInterval(interval);
+            v.innerText = target + "+";
+            p.style.background = `conic-gradient(#22c55e 360deg, #1e293b 0deg)`;
+        }
+
+    }, 40);
+}
+
+run("v1","p1",35);
+run("v2","p2",3);
+run("v3","p3",20);
+</script>
 
 
 
