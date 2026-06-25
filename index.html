@@ -37,6 +37,9 @@ content="PG in Electronic City, Gents PG Bangalore, PG Near Infosys, PG Near Wip
 
 <style>
 
+
+/* current time */
+
   
 /* meter*/
     .innerr{
@@ -437,12 +440,13 @@ display:none;
 </head>
 
 <body>
-   <header style="
+   
+<header style="
 display:flex;
-justify-content:space-between;
 align-items:center;
 padding:15px 20px;
 background:#0f172a;
+position:relative;
 ">
 
     <h1 style="
@@ -453,7 +457,20 @@ background:#0f172a;
         Nagendra PG
     </h1>
 
+    <!-- Time in Center -->
+    <span id="currentTime" style="
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    ">
+    </span>
+
+    <!-- Enquiry Right Side -->
     <a href="Enquiry.html" style="
+    margin-left:auto;
     background:#22c55e;
     color:white;
     text-decoration:none;
@@ -464,6 +481,11 @@ background:#0f172a;
         Enquiry Now
     </a>
 
+</header>
+
+
+    <span id="currentTime"></span>
+</header>
 </header>
 
 
@@ -762,6 +784,40 @@ alt="WhatsApp">
 
 
 </footer>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nagendra PG</title>
+</head>
+<body>
+
+    <!-- Your existing content -->
+
+    <header>
+        <h1>Nagendra PG</h1>
+        <span id="currentTime"></span>
+    </header>
+
+    <!-- Put script here -->
+    <script>
+    function updateTime() {
+        const now = new Date();
+
+        let h = String(now.getHours()).padStart(2, '0');
+        let m = String(now.getMinutes()).padStart(2, '0');
+        let s = String(now.getSeconds()).padStart(2, '0');
+
+        document.getElementById("currentTime").innerHTML =
+            h + ":" + m + ":" + s;
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+    </script>
+
+</body>
+</html>
+
 
 
 
